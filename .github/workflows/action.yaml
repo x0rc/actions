@@ -1,7 +1,11 @@
-on:
+name: test
+# To add triggers, you’ll have to use the on section.
+on: 
   push:
     branches:
       - main
+
+# Tasks are then defined inside the job section (unders steps) which is placed at the same level as the on section.
 
 jobs:
   print_hello:
