@@ -11,7 +11,13 @@ jobs:
         run: echo 'Hello World'
 
 # Tasks are then defined inside the job section (unders steps) which is placed at the same level as the on section.
-
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          
       - name: Terraform Init
         run: |
           terraform init
