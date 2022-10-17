@@ -1,19 +1,17 @@
 # name of the workflow
-name: hello
-
-# To add triggers, you’ll have to use the on section.
-# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#webhook-events
-on: 
+on:
   push:
     branches:
-      - main
-
-# Tasks are then defined inside the job section (unders steps) which is placed at the same level as the on section.
+    - main
 jobs:
-  print_hello:
+  job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello world!"
+      - name: Hello
+        run: echo 'Hello World'
+
+# Tasks are then defined inside the job section (unders steps) which is placed at the same level as the on section.
+
       - name: Terraform Init
         run: |
           terraform init
