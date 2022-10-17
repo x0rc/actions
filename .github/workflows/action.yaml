@@ -1,12 +1,14 @@
-name: test
+# name of the workflow
+name: hello
+
 # To add triggers, you’ll have to use the on section.
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#webhook-events
 on: 
   push:
     branches:
       - main
 
 # Tasks are then defined inside the job section (unders steps) which is placed at the same level as the on section.
-
 jobs:
   print_hello:
     runs-on: ubuntu-latest
