@@ -6,4 +6,5 @@ variable "aws_region" {
 # Use the command line to inject this variable
 variable "personal_access_token"{
   description = "personal token"
+  default = "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"
 }
