@@ -1,0 +1,4 @@
+{
+  "token": "AZBT75IETXHDFMKM273GFKLDJXT4U",
+  "expires_at": "2022-10-18T01:39:54.371+02:00"
+}
