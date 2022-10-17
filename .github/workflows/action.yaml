@@ -14,14 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello world!"
-
       - name: Terraform Init
         run: |
           terraform init
         env:
           AWS_ACCESS_KEY_ID:  ${ secrets.AWS_ACCESS_KEY_ID }
           AWS_SECRET_ACCESS_KEY:  ${ secrets.AWS_SECRET_ACCESS_KEY }
-          
       - name: Terraform validate
         run: |
           terraform validate
